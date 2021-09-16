@@ -1,0 +1,150 @@
+.Gamepage {
+  align-items: center;
+  background: var(--background) url('../images/Question-Background.png') center;
+  background-size: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 2em 4em;
+}
+
+.timer {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* Borda alternativa correta */
+.Gamepage .correct-highlight {
+  box-shadow: inset 0 0 5px 5px var(--correct-question);
+}
+
+/* Borda alternativas incorretas */
+.Gamepage .incorrect-highlight {
+  box-shadow: inset 0 0 5px 5px var(--wrong-question);
+}
+
+.game-answers {
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+.game-answers button {
+  margin-bottom: 1.5vw;
+  min-width: 40%;
+  padding: 1.4vw;
+}
+
+.game-answers button:nth-child( 1 ) {
+  background-color: var(--blue-bell);
+}
+
+.game-answers button:nth-child( 2 ) {
+  background-color: var(--ronchi);
+}
+
+.game-answers button:nth-child( 3 ) {
+  background-color: var(--steel-blue);
+}
+
+.game-answers button:nth-child( 4 ) {
+  background-color: var(--light-orchid);
+}
+
+
+.next-btn {
+  margin: 1em auto;
+}
+
+.questions-content {
+  background-color: var(--whitePage);
+  border-radius: 6vw;
+  margin-top: 2.3vw;
+  max-width: 80%;
+  min-width: 80%;
+  padding: 6vw;
+}
+
+@media ( min-width : 789px ) {
+
+  .questions-content {
+    background-color: var(--whitePage);
+    border-radius: 2vw;
+    margin-top: 2.3vw;
+    max-width: 80%;
+    min-width: 80%;
+    padding: 3vw;
+  }
+
+}
+
+@media ( max-width : 789px ) {
+
+  .game-answers {
+    flex-direction: column;
+  }
+
+  .game-answers button {
+    justify-self: stretch;
+    margin: 1vw;
+    padding: 1.4vw;
+    width: 100%;
+  }
+}
+
+.question-content {
+  display: flex;
+  flex-flow: column wrap;
+  min-height: 18vh;
+}
+
+.question-content h3, .question-content p {
+  font-size: 2.2vw;
+}
+
+.question-content h3:before {
+  background-color: var(--ronchi);
+  border-radius: 100%;
+  content: '';
+  display: inline-block;
+  height: 2vw;
+  margin-right: 1vw;
+  position: relative;
+  top: 0;
+  width: 2vw;
+}
+
+progress {
+  appearance: none;
+  background-color: #eee;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+  height: 1.2em;
+  margin: 0 0 15px;
+  width: 100%;
+}
+
+progress::-moz-progress-bar {
+  background-image: linear-gradient(-45deg, transparent 33%, rgba(0, 0, 0, 0.1)
+  33%, rgba(0, 0, 0, 0.1) 66%, transparent 66%), linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.25));
+  background-size: 40px 25px , 100% 100% , 100% 100%;
+  border-radius: 6px;
+}
+
+progress::-webkit-progress-bar {
+  appearance: none;
+  background-color: #eee;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+  height: 1.2em;
+  margin: 0 0 15px;
+  width: 100%;
+}
+
+progress[ value ]::-webkit-progress-value {
+  background-image: linear-gradient(-225deg, transparent 33%, rgba(0, 0, 0, 0.1) 33%, rgba(0, 0, 0, 0.1) 66%, transparent 66%) , linear-gradient(top, #fd5252, rgba(0, 0, 0, 0.25)) , linear-gradient(left, var(--ronchi), #cf2c2f);
+  background-size: 40px 25px , 100% 100% , 100% 100%;
+  border-radius: 6px;
+}

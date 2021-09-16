@@ -1,0 +1,51 @@
+.Settings {
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  height: 100vh;
+  justify-content: center;
+}
+
+.Settings-Wrapper {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 1px var(--background-shadow);
+  display: flex;
+  flex-flow: column nowrap;
+  height: 495px;
+  padding: 30px 40px;
+  width: 435px;
+}
+
+.Settings-Wrapper h1 {
+  font: 500 30px Poppins , sans-serif;
+  margin: 0 0 15px;
+}
+
+.Settings-Fieldset {
+  background: repeating-linear-gradient(45deg, var(--background), var(--background) 10px, var(--background-shadow) 10px, var(--background-shadow) 16px);
+  border: 0;
+  border-radius: 6px;
+  display: flex;
+  flex-flow: column nowrap;
+  height: 300px;
+  justify-content: flex-start;
+  padding: 30px;
+  width: 100%;
+}
+
+.Settings .SelectQuantity, .Settings .SelectCategory {
+  margin: 0 0 15px;
+}
+
+.Settings .SelectQuantity select, .Settings .SelectCategory select, .Settings .SelectDifficulty select {
+  margin: 5px 0 0;
+}
+
+.Settings-Btns {
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  margin: 30px 0 0;
+}

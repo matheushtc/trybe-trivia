@@ -1,0 +1,76 @@
+.Login {
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  height: 100vh;
+  justify-content: space-between;
+  width: 100vw;
+}
+
+@media ( max-width : 789px ) {
+
+  .Login {
+    align-items: center;
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100vh;
+    justify-content: center;
+    justify-content: space-between;
+  }
+
+  .Hero {
+    background: var(--hero-background) url(/static/media/Question-Background.a3af89fa.png) center;
+    background-size: 100%;
+    box-shadow: 0 0 10px 5px var(--background-shadow);
+    display: flex;
+    flex: 1 1;
+    flex-flow: column nowrap;
+    justify-content: end;
+    margin: 0;
+    min-height: 100vh;
+    position: absolute;
+    width: 100vw;
+    z-index: -1;
+  }
+
+  .Hero p, .Hero h1 {
+    align-self: center;
+    margin: 0;
+  }
+
+  .Login-Wrapper {
+    position: relative;
+    top: 10%;
+    transform: scale(0.8);
+  }
+}
+
+.Login .Login-Wrapper {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+
+.Login .Login-Form {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 1px var(--background-shadow);
+  display: flex;
+  flex-flow: column nowrap;
+  height: 395px;
+  padding: 30px;
+  width: 335px;
+}
+
+.Login .NameInput, .Login .EmailInput {
+  margin: 0 0 20px;
+}
+
+.Login .NameInput input, .Login .EmailInput input, .Login .ViewSettings {
+  margin: 5px 0 0;
+}
+
+.Login .SubmitLogin {
+  transition: 0.5s;
+}

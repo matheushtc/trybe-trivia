@@ -1,0 +1,78 @@
+.Ranking {
+  align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.Ranking-Wrapper {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 1px var(--background-shadow);
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 30px 40px;
+}
+
+.Ranking-Wrapper h1 {
+  font: 500 30px Poppins , sans-serif;
+  margin: 0 0 15px;
+  text-align: center;
+}
+
+.Ranking-Wrapper .GoHome {
+  margin: 15px 0 0;
+}
+
+.Ranking-List {
+  background-color: ghostwhite;
+  border: 0;
+  border-radius: 10px;
+  counter-reset: ranking-counter;
+  display: block;
+  height: 400px;
+  list-style: none;
+  overflow-y: scroll;
+  padding: 0;
+  width: 600px;
+}
+
+.Ranking-List li {
+  counter-increment: ranking-counter;
+}
+
+li:before {
+  background: linear-gradient(170deg, rgba(141, 136, 255, 100) 0%, var(--hero-background) 100%);
+  border-radius: 50%;
+  color: white;
+  content: counter(ranking-counter);
+  display: inline-block;
+  font-family: Poppins , sans-serif;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  text-align: center;
+  width: 2.5rem;
+}
+
+.Ranking-Item {
+  align-items: center;
+  display: flex;
+  height: 130px;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.Ranking-Item img {
+  border: 0;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+}
+
+.Ranking-Name, .Ranking-Score {
+  font-family: Poppins , sans-serif;
+  font-size: 22px;
+  text-align: center;
+  width: 125px;
+}
